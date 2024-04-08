@@ -12,9 +12,9 @@ export class CatsService {
     private catRepository: Repository<Cat>,
   ) {}
 
-  create(data: CatInterface) {
-    const newData =  this.catRepository.create(data);
-    return this.catRepository.save(newData);
+  async create(data: CatInterface) {
+    const newData =  await this.catRepository.create(data);
+    return await this.catRepository.save(newData);
   }
 
   async findAll() {

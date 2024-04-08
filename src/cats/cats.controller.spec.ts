@@ -42,4 +42,34 @@ describe('CatsController', () => {
       expect(await catsController.findAll()).toBe(result);
     });
   });
+
+  describe('findOne', () => {
+    it('should return a single cats', async () => {
+      const result =
+        {
+          id:'821fbe2c-b9cb-42e0-8ded-b64872c923cb',
+          age: 2,
+          breed: 'Bombay',
+          name: 'Pixel',
+        }
+      ;
+      jest.spyOn(catsService, 'findOne').mockImplementation(() => Promise.resolve(result));
+
+      expect(await catsController.findOne({id:'821fbe2c-b9cb-42e0-8ded-b64872c923cb'})).toBe(result);
+    });
+  });
+  describe('create', () => {
+    it('should create a single cat', async () => {
+      const result =
+        {
+          age: 2,
+          breed: 'Bombay',
+          name: 'Pixel',
+        }
+      ;
+      jest.spyOn(catsService, 'create').mockImplementation(() => result as any);
+
+      expect(await catsController.create(result)).toBe(result);
+    });
+  });
 });

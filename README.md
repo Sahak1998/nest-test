@@ -1,7 +1,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Nest.js Test task for auth and cats 
 
 ## Installation
 
@@ -10,6 +10,8 @@ $ npm install
 ```
 
 ## Running the app
+Copy .env.example and create .env 
+Add you database variables in .env 
 
 ```bash
 # development
@@ -18,8 +20,19 @@ $ npm run start
 # watch mode
 $ npm run start:dev
 
-# production mode
-$ npm run start:prod
+# seed
+$ npm run seed
+
+so you will have one admin user 
+
+to login with admin user 
+email : admin@admin.com
+password : admin
+
+to register simple user , use register endpoint
+
+For test I have attached postman collection  with project called nest-task.json
+please import it in postman you will have all requests with sample body's to test and work with 
 ```
 
 ## Test
@@ -28,11 +41,6 @@ $ npm run start:prod
 # unit tests
 $ npm run test
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
 
 ## Support

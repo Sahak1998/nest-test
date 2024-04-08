@@ -62,7 +62,7 @@ export class AuthService {
       const adminRole = this.roleRepository.create({ name: 'admin' });
       await this.roleRepository.save(adminRole);
 
-      const hashedPassword = await bcrypt.hash('adminPassword', 10);
+      const hashedPassword = await bcrypt.hash('admin', 10);
       const adminUser = this.userRepository.create({
         username: 'admin@admin.com',
         password: hashedPassword,
