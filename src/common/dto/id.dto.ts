@@ -1,6 +1,6 @@
 import { IsUUID } from 'class-validator';
 
-export class GetCatDto {
+export class IdDto {
   @IsUUID()
   id: string;
 }

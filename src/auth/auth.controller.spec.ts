@@ -29,7 +29,7 @@ describe('AuthController', () => {
   });
 
 
-  it('should register a user', async () => {
+  it('should register a favorites', async () => {
     const userDto = { username: 'testuser', password: 'testpass' };
     mockAuthService.register.mockResolvedValue({ ...userDto, id: 1 });
 
@@ -38,7 +38,7 @@ describe('AuthController', () => {
   });
 
 
-  it('should login a user', async () => {
+  it('should login a favorites', async () => {
     const req = { user: { username: 'testuser', userId: 1 } };
     mockAuthService.login.mockResolvedValue({ access_token: 'someToken' });
 

@@ -6,6 +6,7 @@ import { AuthModule } from './auth/auth.module';
 import {LocalStrategy} from "./common/strategies/local.strategy";
 import {JwtStrategy} from "./common/strategies/jwt.strategy";
 import {ConfigModule, ConfigService} from "@nestjs/config";
+import {FavoritesModule} from "./favorites/favorites.module";
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -29,7 +30,7 @@ import {ConfigModule, ConfigService} from "@nestjs/config";
       }
 
     }),
-    CoreModule, CatsModule, AuthModule],
+    CoreModule, CatsModule, AuthModule,FavoritesModule],
   providers:[LocalStrategy,JwtStrategy]
 })
 export class AppModule {}

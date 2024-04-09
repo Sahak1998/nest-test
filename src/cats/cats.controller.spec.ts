@@ -37,7 +37,7 @@ describe('CatsController', () => {
           name: 'Pixel',
         },
       ];
-      jest.spyOn(catsService, 'findAll').mockImplementation(() => Promise.resolve(result));
+      jest.spyOn(catsService, 'findAll').mockImplementation(() => Promise.resolve(result as any));
 
       expect(await catsController.findAll()).toBe(result);
     });
@@ -51,9 +51,10 @@ describe('CatsController', () => {
           age: 2,
           breed: 'Bombay',
           name: 'Pixel',
+          favorites:[]
         }
       ;
-      jest.spyOn(catsService, 'findOne').mockImplementation(() => Promise.resolve(result));
+      jest.spyOn(catsService, 'findOne').mockImplementation(() => Promise.resolve(result as any));
 
       expect(await catsController.findOne({id:'821fbe2c-b9cb-42e0-8ded-b64872c923cb'})).toBe(result);
     });

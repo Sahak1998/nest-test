@@ -23,15 +23,15 @@ $ npm run start:dev
 # seed
 $ npm run seed
 
-so you will have one admin user 
+so you will have one admin favorites 
 
-to login with admin user 
+to login with admin favorites 
 email : admin@admin.com
 password : admin
 
-to register simple user , use register endpoint
+to register simple favorites , use register endpoint
 
-For test I have attached postman collection  with project called nest-task.json
+For test I have attached postman collection  with project called nest-last.json
 please import it in postman you will have all requests with sample body's to test and work with 
 ```
 

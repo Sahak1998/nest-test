@@ -3,7 +3,7 @@ import { Roles } from '../common/decorators/roles.decorator';
 import { RolesGuard } from '../common/guards/roles.guard';
 import { CatsService } from './cats.service';
 import { CreateCatDto } from './dto/create-cat.dto';
-import {GetCatDto} from "./dto/get-cat.dto";
+import {IdDto} from "../common/dto/id.dto";
 import {JwtAuthGuard} from "../common/guards/jwt-auth.guard";
 
 
@@ -24,21 +24,21 @@ export class CatsController {
 
   @Get(':id')
   findOne(
-    @Param() {id}: GetCatDto
+    @Param() {id}: IdDto
   ) {
     return this.catsService.findOne(id);
   }
   @Roles(['admin'])
   @Delete(':id')
   deleteOne(
-    @Param() {id}: GetCatDto
+    @Param() {id}: IdDto
   ) {
     return this.catsService.delete(id);
   }
   @Roles(['admin'])
   @Put(':id')
   updateOne(
-    @Param() {id}: GetCatDto,
+    @Param() {id}: IdDto,
     @Body() updateCatDto: CreateCatDto
   ) {
     return this.catsService.update(id,updateCatDto);
