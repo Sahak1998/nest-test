@@ -1,7 +1,7 @@
 
 ## Description
 
-Nest.js Test task for auth and cats 
+Nest.js Test task for auth and cats and favorites of user from cats
 
 ## Installation
 
